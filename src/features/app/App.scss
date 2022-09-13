@@ -75,8 +75,8 @@ html{
 .body {
   box-sizing: border-box;
   position: absolute;
-  width: 1236px;
-  height: 1256px;
+  width: 1240px;
+  height: 1255px;
   left: 147px;
   top: 116px;
   background: #212C42;
@@ -91,4 +91,13 @@ html{
   }
 }
 
+::-webkit-scrollbar{
+  width: 1px;
+  background-color:rgb(20, 21, 24);
+}
+
+::-webkit-scrollbar-thumb{
+  width: 1px;
+  background-color: #8B97AE;
+}
 
