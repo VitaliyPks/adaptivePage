@@ -1,0 +1,101 @@
+.card__item{
+  position: relative;
+  padding-top: 10px ;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 120px;
+  height: 230px;
+  background-color: rgb(25, 34, 51);
+  border-radius: 25px;
+  margin: 25px;
+
+  .card__head{
+    height: 30px;
+    color: white;
+    
+    .head__number{
+      display: flex;
+      justify-content: space-around;
+
+      p{
+        margin: 2px;
+        font-size: smaller;
+      }
+    }
+
+    .head__line{
+      left: 8px;
+      position: absolute;
+      width: 110px;
+      height: 1px;
+      background: #707D96;
+      opacity: 0.2;
+      margin: 2px;
+    }
+
+    .head__text{
+      display: flex;
+      justify-content: space-around;
+
+      p{
+        margin-top: 6px;
+        font-size: xx-small;
+        max-width: 48px;
+      }
+    }
+  }
+
+  .card__body{
+    margin: auto;
+    margin-top: 25px;
+    max-height: 155px;
+    max-width: 110px;
+    overflow: auto;
+    
+    .card__person{
+      max-width: 110px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      img{
+        width: 26px;
+        border: 1px solid white;
+        border-radius: 50%;
+        opacity: 60%;
+      }
+
+      a{
+        font-size: x-small;
+        text-decoration: none;
+        color:  #8B97AE;
+        margin: 0px;
+        margin-left: 5px;
+      }
+    }
+
+    .card__person:hover{
+      img{
+        opacity: 1;
+      }
+    }
+  }
+
+  .card__body::-webkit-scrollbar{
+    width: 1px;
+    background-color:rgb(20, 21, 24);
+  }
+
+  .card__body::-webkit-scrollbar-thumb{
+    width: 1px;
+    background-color: #8B97AE;
+  }
+}
+
+.card__item:hover{
+  width: 118px;
+  height: 228px;
+  border: 1px solid black;
+  box-shadow: 0px 5px 5px rgba(0,0,0 ,0.25);
+
+}
