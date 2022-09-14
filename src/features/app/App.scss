@@ -2,6 +2,10 @@ html{
   background-color: rgb(25, 34, 51);
 }
 
+body._lock{
+  overflow: hidden;
+}
+
 .header__navbar{
   position: absolute;
   width: 1195px;
@@ -22,6 +26,25 @@ html{
 
   .link:hover{
     font-size: 14px;
+  }
+
+  .input__btn{
+    text-transform: uppercase;
+    margin-top: 15px;
+    height: 20px;
+    width: 100px;
+    padding: 0;
+    border: 0;
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+  }
+
+  .input__btn:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  }
+
+  .input__btn:active{
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.8);
   }
 
 }
@@ -91,8 +114,11 @@ html{
   }
 }
 
+
+
 ::-webkit-scrollbar{
   width: 1px;
+  height: 0;
   background-color:rgb(20, 21, 24);
 }
 

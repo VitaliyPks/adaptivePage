@@ -1,8 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './Card.scss';
 
-function Card({ statistic }) {
-  const person = [{ name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }];
+const person = [{ name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }];
 
+function Card({ statistic }) {
   return (
     <div className="card__item">
       <div className="card__head">

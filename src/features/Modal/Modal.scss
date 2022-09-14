@@ -1,0 +1,68 @@
+.modal{
+  position: fixed;
+  width: 100vw;
+  height:100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content{
+  position:absolute;
+  z-index: 2;
+  left: 35%;
+  top: 100px;
+  width: 350px;
+  height: 250px;
+  background-color:  #212C42;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form{
+    display: flex;
+    flex-direction: column;
+
+    .input__text{
+      font-size: medium;
+      height: 30px;
+      width: 190px;
+      padding: 5px;
+      border: 0;
+      background-color: rgb(206, 206, 206);
+
+    }
+
+    .input__text:focus{
+      border: 0;
+      outline: none;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .input__text:hover{
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .input__btn{
+      text-transform: uppercase;
+      margin-top: 15px;
+      height: 40px;
+      width: 200px;
+      padding: 0;
+      border: 0;
+      background-color: rgb(206, 206, 206);
+      cursor: pointer;
+    }
+
+    .input__btn:hover{
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .input__btn:active{
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8);
+    }
+  }
+}

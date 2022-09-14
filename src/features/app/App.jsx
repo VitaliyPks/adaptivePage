@@ -1,17 +1,37 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { useEffect, useContext } from 'react';
+import { ModalContext } from '../../context/ModalContext.jsx';
 import Card from '../card/Card.jsx';
+import Modal from '../Modal/Modal.jsx';
 import './App.scss';
 
+const statistic = [{ value: 9, activ: 543 }, { value: 6, activ: 5344 }, { value: 8, activ: 3256 }, { value: 1, activ: 3331 }, { value: 3, activ: 786 }, { value: 7, activ: 8653 }, { value: 5, activ: 430 }, { value: 2, activ: 888 }, { value: 6, activ: 1234 }, { value: 4, activ: 420 }, { value: 9, activ: 765 }, { value: 8, activ: 228 }];
+
 function App() {
-  const statistic = [{ value: 9, activ: 543 }, { value: 6, activ: 5344 }, { value: 8, activ: 3256 }, { value: 1, activ: 3331 }, { value: 3, activ: 786 }, { value: 7, activ: 8653 }, { value: 5, activ: 430 }, { value: 2, activ: 888 }, { value: 6, activ: 1234 }, { value: 4, activ: 420 }, { value: 9, activ: 765 }, { value: 8, activ: 228 }];
+  const { modal, open, close } = useContext(ModalContext);
+  console.log(modal, 'modal');
+
+  useEffect(() => {
+    modal
+      ? document.body.classList.add('_lock')
+      : document.body.classList.remove('_lock');
+  }, [modal]);
 
   return (
-    <div className="App">
+    <div className='App'>
+      {modal && <Modal onClose={close}>
+        <form className='form' onSubmit={(e) => e.preventDefault()}>
+          <input className='input__text' type="text" name="" id="" />
+          <input className='input__btn' type="submit" value="отправить" />
+        </form>
+      </Modal>}
       <header className='header'>
         <div className="header__navbar">
           <a href="#" className='link'>Мероприятия</a>
+          <input className='input__btn' type="button" value="жмяк" onClick={open} />
           <a href="#" className='link'>Выход</a>
         </div>
       </header>
@@ -56,7 +76,7 @@ function App() {
           {statistic.map((el, i) => <Card key={i} statistic={el} />)}
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
