@@ -3,7 +3,7 @@
   width: 100vw;
   height:100vh;
   background-color: rgba(0,0,0,0.4);
-  z-index: 1;
+  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,11 +11,12 @@
 
 .modal__content{
   position:absolute;
-  z-index: 2;
+  z-index: 7;
   left: 35%;
   top: 100px;
   width: 350px;
   height: 250px;
+  border: 1px solid #000000;
   background-color:  #212C42;
   border-radius: 40px;
   display: flex;
@@ -64,5 +65,24 @@
     .input__btn:active{
       box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8);
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .modal__content{
+    position: absolute;
+    z-index: 7;
+    top: 150px;
+    left: 1%;
+    right: 1%;
+    width: 325px;
+    height: 200px;
+    background-color:  #212C42;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  
   }
 }

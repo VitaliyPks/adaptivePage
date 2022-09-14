@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { ModalContext } from '../../context/ModalContext.jsx';
 import Card from '../card/Card.jsx';
 import Modal from '../Modal/Modal.jsx';
@@ -11,14 +11,24 @@ import './App.scss';
 const statistic = [{ value: 9, activ: 543 }, { value: 6, activ: 5344 }, { value: 8, activ: 3256 }, { value: 1, activ: 3331 }, { value: 3, activ: 786 }, { value: 7, activ: 8653 }, { value: 5, activ: 430 }, { value: 2, activ: 888 }, { value: 6, activ: 1234 }, { value: 4, activ: 420 }, { value: 9, activ: 765 }, { value: 8, activ: 228 }];
 
 function App() {
+  const [active, setActive] = useState(false);
   const { modal, open, close } = useContext(ModalContext);
-  console.log(modal, 'modal');
+  // const sidebar = document.querySelector('.sidebar');
+  // const burger = document.querySelector('.burger');
 
   useEffect(() => {
     modal
       ? document.body.classList.add('_lock')
       : document.body.classList.remove('_lock');
   }, [modal]);
+
+  function hideMenu() {
+    // console.log(sidebar, burger);
+    // sidebar.classList.toggle('_active');
+    // burger.classList.toggle('_active');
+    setActive((activ) => !activ);
+    document.body.classList.toggle('_lock');
+  }
 
   return (
     <div className='App'>
@@ -29,13 +39,18 @@ function App() {
         </form>
       </Modal>}
       <header className='header'>
-        <div className="header__navbar">
-          <a href="#" className='link'>Мероприятия</a>
-          <input className='input__btn' type="button" value="жмяк" onClick={open} />
-          <a href="#" className='link'>Выход</a>
+        <div className="header__container">
+          <div className="header__navbar">
+            <a href="#" className='link'>Мероприятия</a>
+            <input className='input__btn' type="button" value="жмяк" onClick={open} />
+            <a href="#" className='link'>Выход</a>
+            <div className={active ? 'burger _active' : 'burger'} onClick={hideMenu}>
+              <span></span>
+            </div>
+          </div>
         </div>
       </header>
-      <div className="sidebar">
+      <div className={active ? 'sidebar _active' : 'sidebar'}>
         <ul className='sidebar__list'>
           <li className='list__item'>
             <img src='dash.svg' className='test'></img>
