@@ -44,6 +44,7 @@
 
 @media (max-width: 767px) {
   .sidebar{
+    left: 0;
     margin: auto;
     padding: 5px 0px 0px 0px;
     position: fixed;
@@ -66,19 +67,18 @@
       padding: 0;
 
       .list__item{
+
         .link{
           font-size: 17px;
           text-decoration: none;
           color: #8B97AE;
           margin: 5px;
-          
         }
   
         .link:hover{
           color: white;
         }
       }
-   
     }
   }
 
@@ -89,7 +89,9 @@
     top: 25px;
 
     .sidebar__list{
+
       .list__item{
+
         .link{
           font-size: 17px;
           text-decoration: none;
@@ -103,6 +105,5 @@
         }
       }
     }
-
   }
 }

@@ -43,7 +43,6 @@
   .input__btn:active{
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.8);
   }
-
 }
 
 @media (max-width: 767px) {
@@ -83,6 +82,7 @@
         height: 20px;
         cursor: pointer;
       }
+
       .burger span,
       .burger::before,
       .burger::after {
@@ -93,16 +93,20 @@
         transition: all 0.6s ease 0s;
         background-color: white;
       }
+
       .burger::before,
       .burger::after {
         content: '';
       }
+
       .burger::before{
         top: 0;
       }
+
       .burger::after{
         bottom: 0;
       }
+
       .burger span{
         top: 50%;
         transform: scale(1) translate(0px, -50%);
@@ -111,10 +115,12 @@
       .burger._active span{
         transform: scale(0) translate(0px, -50%);
       }
+
       .burger._active::before{
        top: 50%;
        transform: rotate(-45deg) translate(0px, -50%); 
       }
+
       .burger._active::after{
         bottom:  50%;
         transform: rotate(45deg) translate(0px, 50%); 
