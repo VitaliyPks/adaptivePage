@@ -5,9 +5,9 @@ function Header({ active, open, hideMenu }) {
     <header className='header'>
       <div className="header__container">
         <div className="header__navbar">
-          <a href="#" className='link'>Мероприятия</a>
+          <a href="#" className='navbar__link'>Мероприятия</a>
           <input className='input__btn' type="button" value="жмяк" onClick={open} />
-          <a href="#" className='link'>Выход</a>
+          <a href="#" className='navbar__link'>Выход</a>
           <div className={active ? 'burger _active' : 'burger'} onClick={hideMenu}>
             <span></span>
           </div>

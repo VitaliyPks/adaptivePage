@@ -13,7 +13,7 @@
   background-color: rgb(25, 34, 51);
   justify-content: space-between;
 
-  .link{
+  .navbar__link{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size:smaller;
@@ -22,7 +22,7 @@
     width: 100px;
   }
 
-  .link:hover{
+  .navbar__link:hover{
     font-size: 14px;
   }
 
@@ -121,7 +121,5 @@
        }
     }
   }
-
-
 }
 
