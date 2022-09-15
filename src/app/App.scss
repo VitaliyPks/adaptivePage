@@ -1,0 +1,62 @@
+html{
+  background-color: rgb(25, 34, 51);
+}
+
+body._lock{
+  overflow: hidden;
+}
+
+.body {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1240px;
+  min-height: 1255px;
+  left: 147px;
+  top: 116px;
+  background: #212C42;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px 50px 0px 0px;
+
+  .card__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 200px 75px;
+  }
+}
+
+::-webkit-scrollbar{
+  width: 1px;
+  height: 0;
+  background-color:rgb(20, 21, 24);
+}
+
+::-webkit-scrollbar-thumb{
+  width: 1px;
+  background-color: #8B97AE;
+}
+
+@media (max-width: 767px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+  }
+
+  .body{
+    position: relative;
+    top: 55px;
+    left: 0;
+    width: 90vw;
+    min-height: 767px;
+    transition: 0.1s;
+
+    .card__list{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 50px 35px;
+    }
+  }
+}

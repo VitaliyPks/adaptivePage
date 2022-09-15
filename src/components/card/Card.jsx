@@ -1,7 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import './Card.scss';
 
-const person = [{ name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }, { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }];
+const person = [
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' },
+  { name: 'kris_andalova', foto: 'delovoe_foto_9.jpg' }];
 
 function Card({ statistic }) {
   return (
@@ -19,7 +27,7 @@ function Card({ statistic }) {
       </div>
       <div className="card__body">
         {person.map((el, i) => <div className='card__person' key={i}>
-          <img src={el.foto} alt="" srcset="" />
+          <img src={el.foto} alt="" />
           <a href="#">{el.name}</a>
         </div>)}
       </div>

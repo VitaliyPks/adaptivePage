@@ -1,0 +1,127 @@
+.burger{
+  display: none;
+}
+
+.header__navbar{
+  position: absolute;
+  width: 1195px;
+  min-height: 35px;
+  left: 165px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(25, 34, 51);
+  justify-content: space-between;
+
+  .link{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:smaller;
+    text-decoration: none;
+    color: white;
+    width: 100px;
+  }
+
+  .link:hover{
+    font-size: 14px;
+  }
+
+  .input__btn{
+    text-transform: uppercase;
+    height: 20px;
+    width: 100px;
+    padding: 0;
+    border: 0;
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+  }
+
+  .input__btn:hover{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  }
+
+  .input__btn:active{
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.8);
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .header{
+    z-index: 5;
+    position: sticky;
+    top: 0;
+
+    .header__navbar{
+      position: relative;
+      left: 0;
+      top:0;
+      margin: auto;
+      width: 100vw;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    
+      .input__btn{
+        text-transform: uppercase;
+        height: 20px;
+        width: 100px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 0;
+        border: 0;
+        background-color: rgb(206, 206, 206);
+        cursor: pointer;
+      }
+  
+      .burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .burger span,
+      .burger::before,
+      .burger::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.6s ease 0s;
+        background-color: white;
+      }
+      .burger::before,
+      .burger::after {
+        content: '';
+      }
+      .burger::before{
+        top: 0;
+      }
+      .burger::after{
+        bottom: 0;
+      }
+      .burger span{
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+      }
+    
+      .burger._active span{
+        transform: scale(0) translate(0px, -50%);
+      }
+      .burger._active::before{
+       top: 50%;
+       transform: rotate(-45deg) translate(0px, -50%); 
+      }
+      .burger._active::after{
+        bottom:  50%;
+        transform: rotate(45deg) translate(0px, 50%); 
+       }
+    }
+  }
+
+
+}
+
